@@ -7,7 +7,13 @@
 body {
   padding: 0;
   margin: 0;
-  background: linear-gradient(to right, #00AAFF, #00FF6C);
+  background-image: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.h1 {
+  text-align: center;
 }
 
 .calculator-grid {
@@ -17,7 +23,10 @@ body {
   min-height: 100vh;
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+ 
 }
+
+
 
 .calculator-grid > button {
   cursor: pointer;
@@ -25,6 +34,7 @@ body {
   border: 1px solid white;
   outline: none;
   background-color: rgba(255, 255, 255, .75);
+
 }
 
 .calculator-grid > button:hover {
@@ -37,7 +47,7 @@ body {
 
 .output {
   grid-column: 1 / -1;
-  background-color: rgba(0, 0, 0, .75);
+  background-color: rgba(76, 83, 74, 0.75);
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
@@ -55,4 +65,12 @@ body {
 .output .current-operand {
   color: white;
   font-size: 2.5rem;
+}
+
+.calculator-grid > .operation {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(103, 216, 228, 0.75);
 }
